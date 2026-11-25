@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background: #f4f4f4;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+}
+.contenedor {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+header, main > nav {
+    background: #23282d;
+    border-bottom: 5px solid #1496d6;
+    height: 95px;
+}
+header h1 {
+    color: white;
+    font-size: 28px;
+    line-height: 90px;
+    float: left;
+}
+header h1 span {
+    color: #1496d6;
+}
+nav {
+    float: right;
+}
+nav li {
+    float: left;
+    margin-left: 36px;
+    line-height: 90px;
+}
+nav a {
+    color: white;
+    font-size: 15px;
+}
+nav a:hover, nav a.activo {
+    color: #1496d6;
+}
+main > header {
+    float: left;
+    width: 50%;
+    padding-left: 10%;
+}
+main > nav {
+    width: 50%;
+    padding-right: 10%;
+}
+main > nav ul {
+    float: right;
+}
+.boletin, #boletin {
+    clear: both;
+    background: #23282d;
+    height: 85px;
+    overflow: hidden;
+}
+#boletin {
+    padding: 0 10%;
+}
+.boletin h2, #boletin h2 {
+    color: white;
+    font-size: 20px;
+    line-height: 85px;
+    padding-left: 10px;
+    float: left;
+}
+.boletin form {
+    float: right;
+    margin-top: 26px;
+}
+#boletin input, #boletin button {
+    float: right;
+    margin-top: 26px;
+}
+.boletin input, #boletin input {
+    width: 237px;
+    height: 32px;
+    border: 1px solid #ccc;
+    padding: 0 4px;
+    font-size: 12px;
+}
+.boletin button, #boletin button {
+    background: #e8491d;
+    color: white;
+    border: none;
+    height: 35px;
+    padding: 0 18px;
+    font-size: 12px;
+    margin-left: 4px;
+}
+.inicio {
+    height: 295px;
+    background: #3c3c3c;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+}
+.inicio img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1300px;
+    height: 300px;
+    object-fit: cover;
+    opacity: 0.7;
+}
+.inicio .contenedor {
+    position: relative;
+}
+.inicio h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.inicio p {
+    font-size: 18px;
+    width: 80%;
+    margin: 0 auto;
+}
+.caracteristicas {
+    padding: 22px 0 28px 0;
+    text-align: center;
+}
+.caracteristica {
+    float: left;
+    width: 33%;
+    padding: 0 20px;
+}
+.caracteristica img {
+    height: 66px;
+    margin-bottom: 12px;
+}
+.caracteristica h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.caracteristica p {
+    font-size: 12px;
+}
