@@ -7,6 +7,9 @@ body {
     font-family: Arial, sans-serif;
     font-size: 14px;
     background: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 a {
     text-decoration: none;
@@ -20,7 +23,10 @@ img {
 .contenedor {
     width: 80%;
     margin: 0 auto;
-    overflow: hidden;
+}
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
 }
 header, main > nav {
     background: #23282d;
@@ -31,16 +37,14 @@ header h1 {
     color: white;
     font-size: 28px;
     line-height: 90px;
-    float: left;
 }
 header h1 span {
     color: #1496d6;
 }
-nav {
-    float: right;
+nav ul {
+    display: flex;
 }
 nav li {
-    float: left;
     margin-left: 36px;
     line-height: 90px;
 }
@@ -51,41 +55,53 @@ nav a {
 nav a:hover, nav a.activo {
     color: #1496d6;
 }
+nav a.activo {
+    font-weight: bold;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+main > * {
+    width: 100%;
+}
 main > header {
-    float: left;
     width: 50%;
     padding-left: 10%;
 }
 main > nav {
     width: 50%;
     padding-right: 10%;
-}
-main > nav ul {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
 }
 .boletin, #boletin {
-    clear: both;
     background: #23282d;
     height: 85px;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 #boletin {
     padding: 0 10%;
 }
+.boletin .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .boletin h2, #boletin h2 {
     color: white;
-    font-size: 20px;
-    line-height: 85px;
-    padding-left: 10px;
-    float: left;
+    font-size: 20.5px;
+    line-height: 83px;
+    padding-left: 11px;
+}
+#boletin h2 {
+    margin-right: auto;
 }
 .boletin form {
-    float: right;
-    margin-top: 26px;
-}
-#boletin input, #boletin button {
-    float: right;
-    margin-top: 26px;
+    display: flex;
+    align-items: center;
+    margin-right: 11px;
 }
 .boletin input, #boletin input {
     width: 237px;
@@ -99,56 +115,169 @@ main > nav ul {
     color: white;
     border: none;
     height: 35px;
+    min-width: 97px;
     padding: 0 18px;
     font-size: 12px;
     margin-left: 4px;
 }
+#boletin button {
+    margin-right: 11px;
+}
 .inicio {
-    height: 295px;
+    height: 365px;
     background: #3c3c3c;
-    position: relative;
     color: white;
     text-align: center;
-    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
 }
-.inicio img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1300px;
-    height: 300px;
+.inicio > img {
+    width: 100%;
     object-fit: cover;
-    opacity: 0.7;
+    opacity: 0.5;
+    height: 365px;
+    flex-shrink: 0;
 }
 .inicio .contenedor {
-    position: relative;
+    margin-top: -273px;
+    z-index: 1;
 }
 .inicio h2 {
-    font-size: 40px;
-    margin-bottom: 15px;
+    font-size: 50px;
+    margin-bottom: 18px;
 }
 .inicio p {
     font-size: 18px;
-    width: 80%;
+    width: 92%;
     margin: 0 auto;
 }
 .caracteristicas {
-    padding: 22px 0 28px 0;
+    padding: 27px 0 37px;
     text-align: center;
+    display: flex;
+}
+.caracteristicas .contenedor {
+    display: flex;
 }
 .caracteristica {
-    float: left;
-    width: 33%;
+    width: 33.33%;
     padding: 0 20px;
 }
 .caracteristica img {
-    height: 66px;
-    margin-bottom: 12px;
+    display: block;
+    height: 81px;
+    margin: 0 auto 10px;
 }
 .caracteristica h3 {
-    font-size: 15px;
-    margin-bottom: 10px;
+    font-size: 15.8px;
+    margin-bottom: 18px;
 }
 .caracteristica p {
+    font-size: 13.8px;
+    line-height: 16px;
+}
+#contenido {
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px 0 18px;
+    flex: 1;
+    min-height: calc(100vh - 260px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#contenido > section {
+    width: 65%;
+}
+#contenido h2 {
+    font-size: 16px;
+    margin-bottom: 17px;
+}
+#contenido p {
+    font-size: 13.7px;
+    line-height: 15.5px;
+    margin-bottom: 10px;
+}
+#contenido #texto {
+    background: #37424b;
+    color: white;
+    padding: 14px;
+    margin-bottom: 9px;
+}
+#contenido > section > img {
+    display: block;
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+}
+.servicio {
+    background: #e6e6e6;
+    border: 1px solid #ccc;
+    height: 162px;
+    padding: 36px 19px 22px;
+    margin-bottom: 5px;
+}
+.servicio h3 {
+    font-size: 16px;
+    margin-bottom: 17px;
+}
+label {
+    display: block;
+    font-size: 13.5px;
+    line-height: 15px;
+}
+#contenido input, #contenido textarea, #contenido button {
+    display: block;
+    width: 100%;
+    height: 35.5px;
+    border: 1px solid #777;
+    padding: 0 3px;
+    font-family: Arial, sans-serif;
     font-size: 12px;
+    margin-bottom: 5px;
+}
+#contenido textarea {
+    height: 115px;
+    margin-bottom: 7px;
+}
+#contenido button {
+    width: 99.2%;
+    height: 32px;
+    background: #e8491d;
+    color: white;
+    margin-bottom: 0;
+}
+#contenido > #lateral {
+    width: 30%;
+}
+#lateral h3, #lateral p {
+    background: #37424b;
+    color: white;
+}
+#lateral h3 {
+    font-size: 16px;
+    padding: 30px 14px 17px;
+}
+#contenido #lateral p {
+    margin: 0;
+    padding: 0 14px 28px;
+}
+#contenido > #lateral > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 8px;
+}
+footer {
+    background: #1496d6;
+    color: white;
+    text-align: center;
+    height: 80px;
+    font-size: 13px;
+    margin-top: auto;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
